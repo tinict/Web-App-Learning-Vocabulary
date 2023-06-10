@@ -167,12 +167,13 @@ td, th {
 .form__inputVoca span {
     font-size: 18px;
     font-weight: 500;
-    width: 80px;
+    width: 100px;
 }
 
 .form__inputVoca input {
     height: 24px;
     width: 100%;
+    border-radius: 4px;
 }
 
 .NewWord, .MeanWord {

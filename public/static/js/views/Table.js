@@ -5,9 +5,9 @@ export const Table = () => {
     <table>
       <thead>
         <tr>
-          <th style="width:5px">ID</th>
-          <th>Valcabulary</th>
-          <th>Mean</th>
+          <th style="width:5px">STT</th>
+          <th>Tên từ</th>
+          <th>Nghĩa từ</th>
         </tr>
       </thead>
       <tbody class='tblVocabulary'>
@@ -20,9 +20,9 @@ export const RenderTableData = (arr) => {
   return arr.map((item, index) => {
     return `
       <tr>
-        <td data-column="ID">${index+1}</td>
-        <td data-column="Valcabulary">${item.Vocabulary}</td>
-        <td data-column="Mean">${item.Mean}</td>
+        <td data-column="STT">${index+1}</td>
+        <td data-column="Tên từ">${item.Vocabulary}</td>
+        <td data-column="Nghĩa từ">${item.Mean}</td>
       </tr>
     `;
   }).join('');
