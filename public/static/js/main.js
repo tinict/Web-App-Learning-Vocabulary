@@ -66,6 +66,8 @@ btnAddVoca.onclick = () => {
     arr.push(itemWord(newWordElement.value, meanWordElement.value));
     const templateElement = document.querySelector('.template');
     templateElement.classList.remove('displayEnabled');
+    newWordElement.value = '';
+    meanWordElement.value = '';
     UDT_Vocabulary();
 };
 

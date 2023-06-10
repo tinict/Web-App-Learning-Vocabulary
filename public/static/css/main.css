@@ -37,7 +37,6 @@ header {
 
 .container {
     width: 700px;
-    height: 500px;
 }
 
 /* Navigation css */
@@ -115,7 +114,7 @@ td, th {
 	padding: 8px; 
 	border: 1px solid #ccc; 
 	text-align: left; 
-	font-size: 16px;
+	font-size: 14px;
 }
 
 /* HeaderContent */
@@ -176,6 +175,10 @@ td, th {
     width: 100%;
 }
 
+.NewWord, .MeanWord {
+    padding: 6px;
+}
+
 .btngroup {
     display: flex;
     justify-content: space-between;
@@ -184,6 +187,10 @@ td, th {
 
 .btngroup .btnvoca {
     width: 70px;
-    height: 22px;
+    height: 28px;
     cursor: pointer;
+    border-radius: 8px;
+    background-color: #3498db;
+    border-color: rgba(210, 171, 247, 0.741);
+    color: #ffffff;
 }
