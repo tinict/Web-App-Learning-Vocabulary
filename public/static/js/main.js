@@ -22,11 +22,27 @@ rootElement.innerHTML = app();
 
 const arr = [];
 
+// delete element
+const delElement = () => {
+    const btnDelElement = document.querySelectorAll('.del');
+    btnDelElement.forEach((btn, index) => {    
+        btn.onclick = () => {
+            arr.splice(index, 1)
+            UDT_Vocabulary();
+            console.log(arr);
+        }
+    })
+}
+
+
 //function update data table Vocabulary
 const UDT_Vocabulary = () => {
     const ElementtblVocabulary = document.querySelector('.tblVocabulary');
     console.log(ElementtblVocabulary);
     ElementtblVocabulary.innerHTML = RenderTableData(arr);
+    const total = document.querySelector('.total')
+    total.innerHTML = `${arr.length}`
+    delElement();
 }
 
 UDT_Vocabulary();
@@ -69,4 +85,16 @@ btnAddVoca.onclick = () => {
     meanWordElement.value = '';
     UDT_Vocabulary();
 };
+
+const clickRandom = document.getElementById('random')
+clickRandom.onclick = () => {
+    if(arr.length != 0){
+        const index = Math.floor(Math.random() * arr.length)
+        const ok = arr[index].Mean
+        console.log(ok);
+        const trd = document.querySelector('.textRandom');
+        console.log(trd);
+        trd.innerHTML = `<p>${ok}</p>`;
+    }
+}
 

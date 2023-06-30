@@ -8,6 +8,7 @@ export const Table = () => {
           <th style="width:5px">STT</th>
           <th>Tên từ</th>
           <th>Nghĩa từ</th>
+          <th> </th>
         </tr>
       </thead>
       <tbody class='tblVocabulary'>
@@ -23,6 +24,9 @@ export const RenderTableData = (arr) => {
         <td data-column="STT">${index+1}</td>
         <td data-column="Tên từ">${item.Vocabulary}</td>
         <td data-column="Nghĩa từ">${item.Mean}</td>
+        <td >
+          <button class="del" ><i class="fa-solid fa-delete-left"></i></button>
+        </td>
       </tr>
     `;
   }).join('');
